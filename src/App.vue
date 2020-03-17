@@ -1,32 +1,58 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+<div id="app">
+  <div id="menu">
+    <router-link to="/">
+      <div id="brand">
+        <h1>Cook & Create</h1>
+      </div>
+    </router-link>
   </div>
+  <router-view />
+  <footer>
+    <a href="https://github.com/elizabethg123/recipe-book"> My GitHub Repository</a>
+</footer>
+</div>
 </template>
 
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url('https://fonts.googleapis.com/css?family=Bellota:700&display=swap');
+* {
+  font-family: 'Bellota', cursive;
+  color: black;
+  text-decoration: none;
 }
 
-#nav {
-  padding: 30px;
+#menu {
+display: flex;
+justify-content: center;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+#brand {
+  display: flex;
+  justify-content: right;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+
+#favorites {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-star {
+  color: #A0F1EF;
+}
+
+footer{
+  position: fixed;
+  margin-bottom: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 50px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
